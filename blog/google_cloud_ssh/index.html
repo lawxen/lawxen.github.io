@@ -120,22 +120,22 @@
   <div class="container">
     <div class="columns">
       <div class="column is-centered-tablet-portrait">
-        <h1 class="title is-2 section-title">Switch from Drupal to Golang</h1>
+        <h1 class="title is-2 section-title">Add ssh public key to google cloud</h1>
         <h5 class="subtitle is-5 is-muted"></h5>
         <div class="divider"></div>
         
         <section class="section content has-text-justified">
           
 
-<h2 id="switch-from-drupal-to-golang">Switch from Drupal to Golang</h2>
+<h2 id="add-ssh-public-key-to-google-cloud">Add ssh public key to google cloud</h2>
 
-<h3 id="reason">Reason:</h3>
+<p>If we use traditional way of adding public key to ~/.ssh/ , it won&rsquo;t works in google cloud, we must add it throug the google cloud way</p>
 
-<p>I have worked as a Drupal developer/contributor for several years(<a href="https://www.drupal.org/user/2936003/" target="_blank">https://www.drupal.org/user/2936003/</a>), I&rsquo;s a fantastic tool, but its market is smaller and smaller in China.</p>
+<p>Open Computer engine, add click <strong>Metadata</strong> in left menu, then add your public key here</p>
 
-<h3 id="future">Future</h3>
+<p>then use <code>ssh yourname@**.**.**.**</code> to login</p>
 
-<p>I will put my energy in golang and use a new English name <strong>Lawxen</strong> from now on .(PS: My former name is Kaysenlau and caseylau).</p>
+<p>remember do not use <code>ssh root@**.**.**.**</code>, you must use the name defined in <strong>Metadata</strong>, this held me back for a long time.</p>
 
         </section>
       </div>
@@ -144,7 +144,7 @@
   <div class="container">
     <div class="columns">
       <div class="column has-text-right is-family-monospace is-centered-tablet-portrait">
-        Last modified:31 August 2019</div>
+        Last modified:1 September 2019</div>
     </div>
   </div></section><footer class="footer footer-dark">
   <div class="container">

@@ -120,6 +120,126 @@
                     <div class="container">
                         <div class="columns">
                         <div class="column is-centered-tablet-portrait">
+                            <h1 class="title section-title">docker</h1>
+                            <h5 class="subtitle is-5 is-muted"></h5>
+                            <div class="divider"></div>        
+                            <div class="section">
+                            <div class="container">
+                                <div class="columns"></div>
+                                        <div class="columns"><div class="column is-4">
+    <div class="box">
+      <figure class="image is-3by2">
+        <a href="/blog/mariadb_docker_config_fail/"><img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt=""></a>
+      </figure>
+      <h3 class="title is-5 summary-title">
+        777 make the mounted custom mysql config file my.cnf didn&#39;t take effect, 444 fix it when use docker image mariadb
+      </h3>
+      <p class="summary-summary"> 777 make the mounted custom mysql config file my.cnf didn&amp;rsquo;t take effect, 444 fix it when use docker image mariadb Today I add a custom config file my.cnf and mount it to docker iamge&amp;rsquo;s /etc/mysql
+ ### Mariadb Container ####################################### mariadb: image: mariadb:10.4 volumes: - ./mariadb:/var/lib/mysql - ./etc/mysql/my.cnf:/etc/mysql/my.cnf environment: - MYSQL_ROOT_PASSWORD=password ports: - 3306:3306 container_name: mariadb restart: always networks: - backend  But the config didn&amp;rsquo;t take effect, after some investigation, I find the permissoin of my file my.cnf is 777
+After I change the permission of my.cnf to 0444(chmod 0444 my.cnf), then the config take effect.
+</p> 
+      <div class="action has-text-right">
+        <a href="/blog/mariadb_docker_config_fail/" class="button is-primary">
+                Read More
+            </a>
+      </div>
+    </div>
+  </div></div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section><section class="section">
+                    <div class="container">
+                        <div class="columns">
+                        <div class="column is-centered-tablet-portrait">
+                            <h1 class="title section-title">google-cloud</h1>
+                            <h5 class="subtitle is-5 is-muted"></h5>
+                            <div class="divider"></div>        
+                            <div class="section">
+                            <div class="container">
+                                <div class="columns"></div>
+                                        <div class="columns"><div class="column is-4">
+    <div class="box">
+      <figure class="image is-3by2">
+        <a href="/blog/chrome-close-cross-domain/"><img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt=""></a>
+      </figure>
+      <h3 class="title is-5 summary-title">
+        Close the cross domain restrict of Chrome on Mac
+      </h3>
+      <p class="summary-summary"> Create a new user data folder for chrome in ~/Documents mkdir ~/Documents/MyChromeDevUserData
+Open chrome with above folder open -n /Applications/Google\ Chrome.app/ --args --disable-web-security --user-data-dir=/Users/xyz/Documents/MyChromeDevUserData
+</p> 
+      <div class="action has-text-right">
+        <a href="/blog/chrome-close-cross-domain/" class="button is-primary">
+                Read More
+            </a>
+      </div>
+    </div>
+  </div><div class="column is-4">
+    <div class="box">
+      <figure class="image is-3by2">
+        <a href="/blog/google_cloud_ssh/"><img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt=""></a>
+      </figure>
+      <h3 class="title is-5 summary-title">
+        Add ssh public key to google cloud
+      </h3>
+      <p class="summary-summary"> Add ssh public key to google cloud If we use traditional way of adding public key to ~/.ssh/ , it won&amp;rsquo;t works in google cloud, we must add it throug the google cloud way
+Open Computer engine, add click Metadata in left menu, then add your public key here
+then use ssh yourname@**.**.**.** to login
+remember do not use ssh root@**.**.**.**, you must use the name defined in Metadata, this held me back for a long time.
+</p> 
+      <div class="action has-text-right">
+        <a href="/blog/google_cloud_ssh/" class="button is-primary">
+                Read More
+            </a>
+      </div>
+    </div>
+  </div></div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section><section class="section">
+                    <div class="container">
+                        <div class="columns">
+                        <div class="column is-centered-tablet-portrait">
+                            <h1 class="title section-title">maridb</h1>
+                            <h5 class="subtitle is-5 is-muted"></h5>
+                            <div class="divider"></div>        
+                            <div class="section">
+                            <div class="container">
+                                <div class="columns"></div>
+                                        <div class="columns"><div class="column is-4">
+    <div class="box">
+      <figure class="image is-3by2">
+        <a href="/blog/mariadb_docker_config_fail/"><img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt=""></a>
+      </figure>
+      <h3 class="title is-5 summary-title">
+        777 make the mounted custom mysql config file my.cnf didn&#39;t take effect, 444 fix it when use docker image mariadb
+      </h3>
+      <p class="summary-summary"> 777 make the mounted custom mysql config file my.cnf didn&amp;rsquo;t take effect, 444 fix it when use docker image mariadb Today I add a custom config file my.cnf and mount it to docker iamge&amp;rsquo;s /etc/mysql
+ ### Mariadb Container ####################################### mariadb: image: mariadb:10.4 volumes: - ./mariadb:/var/lib/mysql - ./etc/mysql/my.cnf:/etc/mysql/my.cnf environment: - MYSQL_ROOT_PASSWORD=password ports: - 3306:3306 container_name: mariadb restart: always networks: - backend  But the config didn&amp;rsquo;t take effect, after some investigation, I find the permissoin of my file my.cnf is 777
+After I change the permission of my.cnf to 0444(chmod 0444 my.cnf), then the config take effect.
+</p> 
+      <div class="action has-text-right">
+        <a href="/blog/mariadb_docker_config_fail/" class="button is-primary">
+                Read More
+            </a>
+      </div>
+    </div>
+  </div></div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section><section class="section">
+                    <div class="container">
+                        <div class="columns">
+                        <div class="column is-centered-tablet-portrait">
                             <h1 class="title section-title">Personal</h1>
                             <h5 class="subtitle is-5 is-muted"></h5>
                             <div class="divider"></div>        
@@ -246,6 +366,60 @@ Future I will put my energy in golang and use a new English name Lawxen from now
               </table>
             </div>
           </a>
+      <li class="no-children">
+          <a href="/tags/google-cloud">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>google-cloud</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">2</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/docker">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>docker</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">1</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/maridb">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>maridb</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">1</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
       <li class="no-children">
           <a href="/tags/personal">
             <div class="columns">
